@@ -18,7 +18,7 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
-			  background-image:url("ns2.gif");
+			  background-image:url("im.gif");
 			  background-position:center;
 			  background-repeat:no-repeat;
 			  background-size:cover;
