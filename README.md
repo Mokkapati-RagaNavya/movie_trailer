@@ -43,7 +43,6 @@ Your default browser should launch a new tab displaying the movie trailer websit
 The following features were implemented to gain an extra credit from Udacity:
 
 * Added the storyline of the movie to the website.
-* Added the release date to the Movie class, which is also displayed on the website.
 * Changed the background and text colour to create a dark theme for the website.
 * Added subtle drop shadow to the movie poster images.
 
