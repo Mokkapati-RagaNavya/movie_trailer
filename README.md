@@ -9,7 +9,7 @@ Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--
 A Python program that produces the HTML for a movie website that displays
 a number of movies. Click on a movie poster to play its trailer.
 
-## Required Libraries and Dependencies
+## Requirements:
 
 Python 2.x is required to run this project. The Python executable should be in
 your default path, which the Python installer should have set.
