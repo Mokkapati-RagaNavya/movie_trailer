@@ -19,7 +19,7 @@ your default path, which the Python installer should have set.
 This project consists for the following files:
 
 * trailer.py - main Python script to run
-* media.py - contains the class Movie that stores movie details
+* moviemedia.py - contains the class Movie that stores movie details
 * fresh_tomatoes.py - creates the HTML file for the website (Udacity supplied)
 
 ## How to Run Project
