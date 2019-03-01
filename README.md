@@ -1,136 +1,53 @@
-# Movie-Trailer-Project 
+# Project-1:MovieTailer
+### by Mokkapati Raga Navya
 
-A simple movie trailer website project for Udacity's full-stack [nanodegree program](https://www.udacity.com/nanodegree). The project demonstrates the use of a Movie object class in Python to generate a static webpage, which displays a listing of favorite movies and links each movie to its trailers video on YouTube. The project also includes some CSS and jQuery involved in the display of the webpage.  
+Movie trailer website project, part of the Udacity [Full Stack Web Developer
+Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004).
 
-## Table of contents
-- [Quick start](#quick-start)
-- [Documentation](#documentation)
-- [Copyright and license](#copyright-and-license)
+## What it is and does
 
-## Quick Start
+A Python program that produces the HTML for a movie website that displays
+a number of movies. Click on a movie poster to play its trailer.
 
-After downloading the project files, a movie trailer page can be created by importing [media.py](https://github.com/edwardbryant/udacity-movie-trailer-project/blob/master/media.py) and [fresh_tomatoes.py](https://github.com/edwardbryant/udacity-movie-trailer-project/blob/master/fresh_tomatoes.py) at the start of your Python script. Then create idividual Movie objects by calling media.Movie() and supplying it with four arguments -- title, year, poster_url, and trailer_url. Lastly, to generate the movie trailers page, call fresh_tomatoes.open_movies_page() and supply it with an array of the movie objects you created. 
+## Required Libraries and Dependencies
 
-```
-import media
-import fresh_tomatoes
+Python 2.x is required to run this project. The Python executable should be in
+your default path, which the Python installer should have set.
 
-#information for object arguments
-title = "Pulp Fiction"
-year = 1994
-poster_url = "http://goo.gl/V5fb9n"
-trailer = "https://www.youtube.com/watch?v=ewlwcEBTvcg"
+## Project contents
 
-# Create Movie object
-pulp_fiction = media.Movie(title, year, poster_url, trailer_url)
+This project consists for the following files:
 
-# Create movie trailer page with array of one movie
-fresh_tomatoes.open_movies_page([pulp_fiction])
+* entertainment_center.py - main Python script to run
+* media.py - contains the class Movie that stores movie details
+* fresh_tomatoes.py - creates the HTML file for the website (Udacity supplied)
 
-```
+## How to Run Project
 
-A more detailed example with multiple movie objects, which is used for the [demo](http://edwardbryant.github.io/udacity-movie-trailer-project/fresh_tomatoes.html), can be found in [entertainment_center.py](https://github.com/edwardbryant/udacity-movie-trailer-project/blob/master/entertainment_center.py) 
+Download the project zip file to you computer and unzip the file. Or clone this
+repository to your desktop.
 
+Open the text-based interface for your operating system (e.g. the terminal
+window in Linux, the command prompt in Windows).
 
-### What's included
+Navigate to the project directory and type in the following command:
 
-Within the download you'll find the following directories and files:
-
-```
-udacity-movie-trailer-project-master.zip/
-├── css/
-│   └── main.css
-├── img/
-│   └── curtains.jpg
-├── js/
-│   └── main.js
-├── entertainment_center.py
-├── fresh_tomatoes.html
-├── fresh_tomatoes.py
-├── media.py
-└── README.md
+```bash
+python entertainment_center.py
 ```
 
-## Documentation
+Your default browser should launch a new tab displaying the movie trailer website.
 
-### Movie object class
+## Extra Credit Description
 
-The Movie object class consists of four class variables, a simple constructor method, and a class method for playing a Movie object's movie trailer. The code is located in [media.py](https://github.com/edwardbryant/udacity-movie-trailer-project/blob/master/media.py). 
+The following features were implemented to gain an extra credit from Udacity:
 
-##### constructor method
+* Added the storyline of the movie to the website.
+* Added the release date to the Movie class, which is also displayed on the website.
+* Changed the background and text colour to create a dark theme for the website.
+* Added subtle drop shadow to the movie poster images.
 
-The constructor method is called when a new Movie object is created and must include four arguments -- [title](#movietitle), [year](#movieyear), [poster_url](#movieposter_url), and [trailer_url](#movietrailer_url). Each of these arguments is discussed further below.
+## Miscellaneous
 
-```
-import media
-
-#information for object arguments
-title = "Pulp Fiction"
-year = 1994
-poster_url = "http://goo.gl/V5fb9n"
-trailer = "https://www.youtube.com/watch?v=ewlwcEBTvcg"
-
-# Create Movie object
-pulp_fiction = media.Movie(title, year, poster_url, trailer_url)
-```
-
-###### movie.title
-
-movie.title is any string used to identify the movie object.
-
-###### movie.year
-
-movie.year is an integer representing the year the movie was released.  
-
-###### movie.poster_url
-
-movie.poster_url is a string containing a URL linking to an image which will be used to represent the Movie object, such as a movie poster or DVD box cover. The movie trailer page portion of this project displays these images with a width of 188px and a height of 292px. So, images with a ratio of 1:1.5 will work best. 
-
-###### movie.trailer_url
-
-movie.trailer_url is a string containing a URL linking to the movie trailer on YouTube.com. The movie trailer page portion of the this project extracts the YouTube id from the URL, so while links to other video services are valid in the Movie class object, they will not work with the movie trailers page. 
-
-##### show_trailer method
-
-show_trailer can be called on any Movie class object to launch that object's movie trailer in a webpage. This method is useful for testing but is not used by the script that generates the finished movie trailers page.
-
-### Movie Trailer Page Functions 
-
-The functions used to create the final movie trailers page are located in [fresh_tomatoes.py](https://github.com/edwardbryant/udacity-movie-trailer-project/blob/master/media.py), along with HTML template variables used by these functions. This file must be imported to access the functions described below.
-
-#### open_movies_page function
-
-To create the static movie trailers page the open_movies_page function must be called and supplied with one required argument (an array of Movie class objects) and one optional argument (a string specifying a sort order). If no sort order is specified or an unrecognized sort option is provided, the order the movies appear in the array will be used. Valid strings for specifying a sort order are:
-
-- "none" (no sort, default)
-- "alpha" (alphabetical by title)
-- "alpha-reverse" (reverse alphabetical by title)
-- "cron" (cronological by year)
-- "cron-reverse" (cronological by year)
-
-```
-# Create movie trailer page with array of Movie class objects
-fresh_tomatoes.open_movies_page([movie1, movie2, movie3])
-
-# Create page with movies sorted in reverse cronological order by year 
-fresh_tomatoes.open_movies_page([movie1, movie2, movie3], "cron-reverse")
-
-``` 
-
-The newly generated page will be placed in the same directory and named fresh_tomatoes.html. This new page relies on three files for its background image (img/curtains.jpg), CSS style settings (css/main.css), and jQuery effects (js/main.js).
-
-#### create_movie_tiles_content
-
-The create_movie_tiles_content function is called by the open_movies_page function. It takes the array of Movie class objects as an argument and iterates through each Movie object and applies the object's data to the portion of the HTML template for each movie. While iterating through each object's class variables, it extracts the YouTube id from movie.trailer_url.
-
-#### sort_movie_data
-
-The sort_movie_data function is called by the open_movies_page function. It takes two arguments the array of Movie class objects and the sort_option specify when open_movies_page was called (or "none" if no sort_option was provided). The function sorts the array, if needed and returns the array. 
-
-## Copyright and License
-
-- Project starter code (supplied without rights information) contributed by [Udacity](http://www.udacity.com).
-
-- Additional code contributed by [Edward Bryant]() is offered under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
-
-- Background image by [sethoscope](https://www.flickr.com/photos/sethoscope/2884743046/) used under [Creative Coomons Attribution-NonCommercial-ShareAlike 2.0 Generic License (BY-NC-SA)](http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en).
+This README document is based on a template suggested by PhilipCoach in this
+Udacity forum [post](https://discussions.udacity.com/t/readme-files-in-project-1/23524).
