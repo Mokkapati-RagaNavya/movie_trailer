@@ -14,7 +14,7 @@ a number of movies. Click on a movie poster to play its trailer.
 Python 2.x is required to run this project. The Python executable should be in
 your default path, which the Python installer should have set.
 
-## Project contents
+## Project includes:
 
 This project consists for the following files:
 
