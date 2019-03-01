@@ -4,7 +4,7 @@
 Movie trailer website project, part of the Udacity [Full Stack Web Developer
 Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004).
 
-## What it is and does
+## what the project is about and how it does
 
 A Python program that produces the HTML for a movie website that displays
 a number of movies. Click on a movie poster to play its trailer.
